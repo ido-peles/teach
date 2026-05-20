@@ -1,0 +1,5 @@
+add main.py a function called draw_bg that display image called images\bg_01 on the screen
+Add another function called draw_penguin(str file_name, double resize)
+that display file images\file_name resized according to resize
+use this function to display images\pengiui.jpg at 0.1 resized in the center of the screen
+when the penguin image is clicked hide it (but only in the exect figure)
