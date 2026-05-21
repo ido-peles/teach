@@ -36,7 +36,7 @@ game_state = "playing"  # Can be "playing" or "success"
 
 def draw_bg():
     """Displays the background image on the game area."""
-    bg_image_path = os.path.join("images", "bg_02.jpeg")
+    bg_image_path = os.path.join("images", "bg_03.jpeg")
     try:
         bg_image = pygame.image.load(bg_image_path).convert()
         bg_image = pygame.transform.scale(bg_image, (game_area_width, screen_height))
@@ -50,7 +50,7 @@ class Penguin(pygame.sprite.Sprite):
     def __init__(self, penguin_type: str, resize: float, x: int, y: int):
         super().__init__()
         self.penguin_type = penguin_type
-        file_name = "pin_redhat.png" if penguin_type == "good" else "pin_pirate.png"
+        file_name = "scarf_ping.png" if penguin_type == "good" else "hat_ping.png"
         penguin_image_path = os.path.join("images", file_name)
         try:
             self.image = pygame.image.load(penguin_image_path).convert_alpha() if file_name.endswith('.png') else pygame.image.load(penguin_image_path).convert()
@@ -89,7 +89,7 @@ def init_penguins(num_penguins, all_sprites):
         if penguin_type == "good":
             good_penguins_spawned += 1
         x, y = random.randint(50, game_area_width - 50), random.randint(50, screen_height - 50)
-        resize = random.uniform(0.1, 0.5)
+        resize = random.uniform(0.1, 0.3)
         penguin = Penguin(penguin_type, resize, x, y)
         all_sprites.add(penguin)
     return good_penguins_spawned
