@@ -30,7 +30,7 @@ LIGHT_BLUE = (173, 216, 230)
 good_count = 0
 bad_count = 0
 total_good_penguins = 0
-num_penguins_input = "5"
+num_penguins_input = "15"
 input_active = False
 game_state = "playing"  # Can be "playing" or "success"
 
